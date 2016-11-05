@@ -14,13 +14,19 @@ function LunchCheckController($scope) {
 
 
     if ( $scope.testo == "") {
+      $scope.response = "error";
       return $scope.result = "Please enter data first";
     }
     else if ( totWorld.length < 4 )
-        {return $scope.result =  "Enjoy!";}
+
+        {  $scope.response = "ok";
+          return $scope.result =  "Enjoy!";}
     else  {
+        $scope.response = "error";
+
         return $scope.result = "Too much!";
     }
+
   };
 
 
