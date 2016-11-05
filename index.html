@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='LunchCheck'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body { font-size: 1.2em; }</style>
+    <title>LunchCheck</title>
+  </head>
+  <body>
+    <h1>LunchCheck</h1>
+    <div ng-controller='LunchCheckController'>
+      <textarea ng-model="testo" rows="4" cols="50"></textarea>
+
+      <br>
+      {{result}}
+      <br>
+      <button ng-click="countWorld()">Check if Too Much</button>
+      <br>
+
+      <br>
+    </div>
+
+  </body>
+</html>
