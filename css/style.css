@@ -2,7 +2,10 @@
   color: red;
 
 }
+.warning {
+  color: orange;
 
+}
 .ok {
-  color: green;
+  color: lightgreen;
 }

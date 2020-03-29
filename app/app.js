@@ -7,6 +7,7 @@ angular.module('LunchCheck', [])
 LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
   $scope.testo = "";
+  $scope.item = "";
 
   $scope.countWorld = function () {
 
@@ -14,17 +15,23 @@ function LunchCheckController($scope) {
 
 
     if ( $scope.testo == "") {
-      $scope.response = "error";
+       $scope.response = "warning";
        $scope.result = "Please enter data first";
-    }
-    else if ( $scope.totWorld.length < 4 )
+       $scope.item = "";
+    } else if ( $scope.totWorld.length < 4 ) {
+        $scope.response = "ok";
+        $scope.result =  "Enjoy!";
+        if ( ( $scope.totWorld.length == 1 )) {
+          $scope.item = "item";
+        }else {
+          $scope.item = "items";
+        }
 
-        {  $scope.response = "ok";
-           $scope.result =  "Enjoy!";}
-    else  {
+
+    } else  {
         $scope.response = "error";
-
-         $scope.result = "Too much!";
+        $scope.result = "Too much!";
+        $scope.item = "items";
     }
 
   };
