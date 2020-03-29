@@ -10,21 +10,21 @@ function LunchCheckController($scope) {
 
   $scope.countWorld = function () {
 
-   var  totWorld = $scope.testo.split("," ) ;
+   $scope.totWorld = $scope.testo.split("," ) ;
 
 
     if ( $scope.testo == "") {
       $scope.response = "error";
-      return $scope.result = "Please enter data first";
+       $scope.result = "Please enter data first";
     }
-    else if ( totWorld.length < 4 )
+    else if ( $scope.totWorld.length < 4 )
 
         {  $scope.response = "ok";
-          return $scope.result =  "Enjoy!";}
+           $scope.result =  "Enjoy!";}
     else  {
         $scope.response = "error";
 
-        return $scope.result = "Too much!";
+         $scope.result = "Too much!";
     }
 
   };
